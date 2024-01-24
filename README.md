@@ -15,3 +15,9 @@ For Frontend:
         A - npm install
         B - npm i vue
         C - npm run dev
+
+Open the web browser with the URL provided by the frontend development environment window. It typically looks like this: 
+    http://localhost:8080
+
+
+And now you can view the designed application; Laravel for the server (backend) and Vue for the browser (frontend).
