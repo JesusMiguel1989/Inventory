@@ -6,8 +6,9 @@ For the proper functioning of the app, these steps must be followed:
 For Backend:
     1 - Open the 'Shop' folder from a development environment and launch the console.
     2 - Enter the following commands in the terminal or command line:
-        A - php artisan migrate
-        B - php artisan serve
+        A - Docker-compose --build 
+        B - Docker exec -it shop-shop-laravel-app-1 php artisan migrate
+        C - Docker-compose restart
 
 For Frontend:
     1 - Open the 'store' project in another window of the development environment and launch the command-line terminal.
