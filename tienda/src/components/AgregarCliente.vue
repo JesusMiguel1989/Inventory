@@ -96,7 +96,7 @@ export default {
             this.$emit('close');
         },
         addClient() {
-            this.$http.post('http://127.0.0.1:8000/client/add', this.newClients, {
+            this.$http.post('http://localhost:8089/client/add', this.newClients, {
                 headers: {
                     'X-CSRF-TOKEN': this.csrfToken
                 }

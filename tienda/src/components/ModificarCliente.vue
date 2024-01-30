@@ -87,7 +87,7 @@ export default {
         },
         updateClient() {
             console.log(this.client.id);
-            this.$http.patch('http://127.0.0.1:8000/client/edit/' + this.client.id, this.client, {
+            this.$http.patch('http://localhost:8089/client/edit/' + this.client.id, this.client, {
                 headers: {
                     'X-CSRF-TOKEN': this.csrfToken,
                     'Access-Control-Allow-Origin': 'http://localhost:8080',

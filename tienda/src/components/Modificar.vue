@@ -89,7 +89,7 @@ export default {
         },
         updateProduct() {
             console.log(this.producto.id);
-            this.$http.patch('http://127.0.0.1:8000/product/edit/' + this.producto.id, this.producto, {
+            this.$http.patch('http://localhost:8089/product/edit/' + this.producto.id, this.producto, {
                 headers: {
                     'X-CSRF-TOKEN': this.csrfToken,
                     'Access-Control-Allow-Origin': 'http://localhost:8080',

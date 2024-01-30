@@ -1,0 +1,8 @@
+FROM mysql:latest
+
+ENV MYSQL_ROOT_PASSWORD=1234
+ENV MYSQL_DATABASE=laravel
+
+COPY ./scripts /docker-entrypoint-initdb.d
+COPY wait-for-it.sh /wait-for-it.sh
+RUN chmod +x /wait-for-it.sh

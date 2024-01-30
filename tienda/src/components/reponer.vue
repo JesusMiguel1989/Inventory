@@ -45,7 +45,7 @@ export default {
                 stock: this.producto.stock + parseInt(this.cantidadReponer, 10)
             };
 
-            this.$http.patch(`http://127.0.0.1:8000/product/replace/${this.producto.id}`, data, {
+            this.$http.patch(`http://localhost:8089/product/replace/${this.producto.id}`, data, {
                 headers: {
                     'X-CSRF-TOKEN': this.csrfToken,
                 }

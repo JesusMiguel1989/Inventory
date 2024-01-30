@@ -121,7 +121,7 @@ export default {
         },
         deleteClient(client) {
             console.log('Borrando', client.id);
-            this.$http.delete(`http://127.0.0.1:8000/client/${client.id}`, {
+            this.$http.delete(`http://localhost:8089/client/${client.id}`, {
                 headers: {
                     'X-CSRF-TOKEN': this.csrfToken,
                     'Accept': 'application/json'
@@ -145,7 +145,7 @@ export default {
         closeModal() {
             this.modalVisible = false;
             this.modalVisible2 = false;
-            this.$http.get('http://127.0.0.1:8000/client')
+            this.$http.get('http://localhost:8089/client')
                 .then(res => {
                     this.clients = res.body;
                 })
@@ -156,7 +156,7 @@ export default {
         }
     },
     created() {
-        this.$http.get('http://127.0.0.1:8000/client')
+        this.$http.get('http://localhost:8089/client')
             .then(res => {
                 this.clients = res.body;
                 //console.log(clients);

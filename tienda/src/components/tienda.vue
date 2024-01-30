@@ -170,7 +170,7 @@ export default {
         deleteProducto(producto) {
             console.log('Borrando', producto.id);
 
-            this.$http.delete(`http://127.0.0.1:8000/product/${producto.id}`, {
+            this.$http.delete(`http://localhost:8089/product/${producto.id}`, {
                 headers: {
                     'X-CSRF-TOKEN': this.csrfToken,
                     'Accept': 'application/json'
@@ -237,7 +237,7 @@ export default {
         }
     },
     created() {
-        this.$http.get('http://127.0.0.1:8000/product')
+        this.$http.get('http://localhost:8089/product')
             .then(res => {
                 this.allProducts = res.body;
                 this.products = res.body;

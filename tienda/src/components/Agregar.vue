@@ -80,7 +80,7 @@ export default {
     },
     methods: {
         addProducto() {
-            this.$http.post('http://127.0.0.1:8000/product/store', this.newProduct, {
+            this.$http.post('http://localhost:8089/product/store', this.newProduct, {
                 headers: {
                     'X-CSRF-TOKEN': this.csrfToken
                 }
@@ -115,7 +115,7 @@ export default {
         }
     },
     created() {
-        this.$http.get('http://127.0.0.1:8000/product')
+        this.$http.get('http://localhost:8089/product')
             .then(res => {
                 this.products = res.body;
                 //console.log(products);
